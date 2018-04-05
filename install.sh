@@ -15,7 +15,7 @@ ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 
 # prep vim
 mkdir ~/.vim
-ln -sfv "$DOTFILES_DIR/vim/colors" "~/.vim/colors"
+ln -sfv "$DOTFILES_DIR/vim/colors ~/.vim/colors"
 
 # Install packages
 . "$DOTFILES_DIR/install/brew.sh"

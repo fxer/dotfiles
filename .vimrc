@@ -1,7 +1,7 @@
-# Set theme
+" Set theme
 colorscheme Tomorrow-Night
 
-# Centralize backups, swapfiles and undo history
+" Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 if exists("&undodir")
