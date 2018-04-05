@@ -1,9 +1,6 @@
 # Choose homebrew installed apps first
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
-# source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
-# source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
-
 # History
 export HISTSIZE=32768;
 export HISTFILESIZE="${HISTSIZE}";
@@ -19,6 +16,14 @@ fi
 if [ -f /usr/local/share/bash-completion/bash_completion ]; then
   . /usr/local/share/bash-completion/bash_completion
 fi
+
+# homebrew gcp command completion
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
+
+# homebrew
+alias brewup='brew update && echo "Outdated:" && brew outdated && brew cask outdated'
+alias brewupg="brew upgrade && brew cask upgrade && brew cleanup && brew prune"
 
 export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxexexabagacad
@@ -48,10 +53,6 @@ export CUJO_DATABASE_PASSWORD="password"
 # macOS hacks
 alias fdns='echo "Flushing DNS..."; sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say flushed'
 alias fixcam='sudo killall VDCAssistant && sudo killall AppleCameraAssistant'
-
-# homebrew
-alias brewup='brew update && echo "Outdated:" && brew outdated && brew cask outdated'
-alias brewupg="brew upgrade && brew cask upgrade && brew cleanup && brew prune"
 
 # git
 alias gs='git status'
