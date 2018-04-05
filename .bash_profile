@@ -4,7 +4,6 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
 # source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
 
-
 # History
 export HISTSIZE=32768;
 export HISTFILESIZE="${HISTSIZE}";
@@ -20,9 +19,6 @@ fi
 if [ -f /usr/local/share/bash-completion/bash_completion ]; then
   . /usr/local/share/bash-completion/bash_completion
 fi
-
-# AWS completion
-complete -C aws_completer aws
 
 export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxexexabagacad
