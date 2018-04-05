@@ -50,7 +50,8 @@ alias fdns='echo "Flushing DNS..."; sudo dscacheutil -flushcache;sudo killall -H
 alias fixcam='sudo killall VDCAssistant && sudo killall AppleCameraAssistant'
 
 # homebrew
-alias brewup='brew update && echo "Outdated:" && brew outdated'
+alias brewup='brew update && echo "Outdated:" && brew outdated && brew cask outdated'
+alias brewupg="brew upgrade && brew cask upgrade && brew cleanup && brew prune"
 
 # git
 alias gs='git status'
