@@ -10,3 +10,4 @@ Just my dotfiles
 * http://dotfiles.github.io/
 * https://github.com/webpro/dotfiles
 * https://github.com/mathiasbynens/dotfiles
+* https://github.com/nicksp/dotfiles
