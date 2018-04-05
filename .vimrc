@@ -15,7 +15,7 @@ set modeline
 set modelines=4
 
 set laststatus=2                      " Always show status line
-set guifont=Menlo:h14                 " choose larger/nicer looking font for macvim
+set guifont=Menlo\ Regular:h15        " choose larger/nicer looking font for macvim
 set expandtab                         " convert tabs to spaces
 set showmatch                         " show matching parenthesis
 set ruler                             " Show the cursor position
