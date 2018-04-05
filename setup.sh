@@ -18,9 +18,11 @@ ln -snfv "$DOTFILES_DIR/atom" ~/.atom
 mkdir -p ~/.vim/{swaps,backups,undo}
 ln -snfv "$DOTFILES_DIR/vim/colors" ~/.vim/colors
 
-
 # Install packages
 . "$DOTFILES_DIR/install/brew.sh"
 
 # Add homebrew bash 4 as valid shell, set as user's shell
 grep -q /usr/local/bin/bash /private/etc/shells || echo /usr/local/bin/bash | sudo tee -a /private/etc/shells | chsh -s /usr/local/bin/bash
+
+# Customize macOS itself
+. "$DOTFILES_DIR/macos/defaults.sh"
