@@ -3,6 +3,7 @@
     vault_password_file_flag: true
   "autocomplete-python":
     extraPaths: "/Users/jmontgomery/.virtualenvs/cujo/lib/python3.6/site-packages"
+    useKite: false
   core:
     customFileTypes:
       "source.js": [
