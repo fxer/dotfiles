@@ -11,9 +11,9 @@ HISTSIZE=1000000000
 # Add ssh keys with passphrases to keychain
 ssh-add -A 2>/dev/null
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
-fi
+# homebrew bash-completion
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
 
 # AWS completion
 complete -C aws_completer aws
