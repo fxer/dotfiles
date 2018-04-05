@@ -1,4 +1,4 @@
-# Choose homebrew bins first
+# Choose homebrew installed apps first
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
@@ -8,12 +8,10 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 HISTFILESIZE=1000000000
 HISTSIZE=1000000000
 
-# Add ssh keys with passphrases to keychain
-ssh-add -A 2>/dev/null
-
-# homebrew bash-completion
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
-
+# homebrew bash4 bash-completion
+if [ -f /usr/local/share/bash-completion/bash_completion ]; then
+  . /usr/local/share/bash-completion/bash_completion
+fi
 
 # AWS completion
 complete -C aws_completer aws
@@ -22,39 +20,42 @@ export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxexexabagacad
 export CDPATH=.:~:~/repos:~/sites
 
-alias ll='ls -alh'
-alias tac=gtac
-alias sb='source ~/.bash_profile'
-alias fdns='echo "Flushing DNS..."; sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say flushed'
-alias brewup='brew update && echo "Outdated:" && brew outdated'
-alias brewupg="brew outdated | tr '\n' ' ' |  sed 's/mysql //g' | xargs brew upgrade"
+# Directory listing/traversal
+alias l="ll"
+alias ll="ls -lAh"
+alias lt="ls -lAhtr"
+
+alias ..="cd .."
+alias ...="cd ../.."
+
+# Shortcuts
+alias reload="source ~/.bash_profile"
+
+# Development
 alias gyb="python3 gyb.py"
-alias fixcam='sudo killall VDCAssistant && sudo killall AppleCameraAssistant'
 alias py='python manage.py runserver'
 alias torstatus='cd ansible-jmo && ansible tor-relays -m shell -a "systemctl status tor" && cd -'
 
-# git commands
+export WORKON_HOME=~/.virtualenvs/    # Python venv locaiton for virtualenvwrapper
+
+export CUJO_DATABASE_USER="django_tester"
+export CUJO_DATABASE_PASSWORD="password"
+
+# macOS hacks
+alias fdns='echo "Flushing DNS..."; sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say flushed'
+alias fixcam='sudo killall VDCAssistant && sudo killall AppleCameraAssistant'
+
+# homebrew
+alias brewup='brew update && echo "Outdated:" && brew outdated'
+
+# git
 alias gs='git status'
 alias gh='git push'
 alias gl='git pull'
 alias ga='git add -A && git status'
 function gc { git commit -m "$1"; }
-alias rebase-dev='!(git pull || true) && git checkout dev && git pull && git checkout - && git rebase dev'
+alias rebase-dev="!(git pull || true) && git checkout dev && git pull && git checkout - && git rebase dev"
 
-mygrants() {
-  mysql -B -N $@ -e "SELECT DISTINCT CONCAT(
-    'SHOW GRANTS FOR \'', user, '\'@\'', host, '\';'
-    ) AS query FROM mysql.user" | \
-  mysql $@ | \
-  sed 's/\(GRANT .*\)/\1;/;s/^\(Grants for .*\)/## \1 ##/;/##/{x;p;x;}'
-}
-
+# enhance terminal prompt with git repo info
 GIT_PS1_SHOWDIRTYSTATE=true
-export PS1='\[\033[32m\]\u@mbp\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
-#export PS1='\u@mbp \w$(__git_ps1)\$ '
-
-export WORKON_HOME=~/.virtualenvs/
-#source /usr/local/bin/virtualenvwrapper.sh
-
-export CUJO_DATABASE_USER="django_tester"
-export CUJO_DATABASE_PASSWORD="password"
+export PS1="\[\033[32m\]\u@mbp\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ "
