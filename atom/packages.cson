@@ -1,0 +1,18 @@
+packages: [
+  "ansible-vault"
+  "atom-jinja2"
+  "autocomplete-python"
+  "busy-signal"
+  "date"
+  "django-templates"
+  "intentions"
+  "language-terraform"
+  "linter"
+  "linter-pylint"
+  "linter-ui-default"
+  "package-sync"
+  "project-manager"
+  "python-indent"
+  "Sublime-Style-Column-Selection"
+  "wordcount"
+]

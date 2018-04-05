@@ -3,7 +3,6 @@
     vault_password_file_flag: true
   "autocomplete-python":
     extraPaths: "/Users/jmontgomery/.virtualenvs/cujo/lib/python3.6/site-packages"
-    useKite: false
   core:
     customFileTypes:
       "source.js": [
@@ -23,8 +22,6 @@
     invisibles: {}
   "exception-reporting":
     userId: "1ae7e85e-93ca-fcb9-5626-addbadcdebea"
-  kite:
-    showKiteTourOnStatup: false
   "linter-pylint":
     executablePath: "/Users/jmontgomery/.virtualenvs/cujo/bin/pylint"
   "linter-ui-default": {}
