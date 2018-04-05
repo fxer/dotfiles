@@ -6,3 +6,5 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Symlink dotfiles
 ln -sfv "$DOTFILES_DIR/.bash_profile" ~
+ln -sfv "$DOTFILES_DIR/.gitconfig" ~
+ln -sfv "$DOTFILES_DIR/.gitignore_global" ~

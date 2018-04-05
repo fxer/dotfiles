@@ -1,9 +1,8 @@
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/opt/python@2/bin:$PATH"
-export PATH="/usr/local/opt/node@6/bin:$PATH"
-export PATH="/usr/local/opt/openssl/bin:$PATH"
+# Choose homebrew bins first
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+
+# source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
+# source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
 
 # unlimited-ish history file
 HISTFILESIZE=1000000000

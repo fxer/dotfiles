@@ -1,0 +1,14 @@
+*~
+.DS_Store
+*.swp
+*._.*
+._*
+.project
+.buildpath
+.settings/
+.idea/
+*.iml
+.vagrant/
+Vagrantfile
+.vscode
+node_modules
