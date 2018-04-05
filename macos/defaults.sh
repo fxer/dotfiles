@@ -74,6 +74,6 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in  "Dock"; do
+for app in "Activity Monitor" "Dock"; do
   killall "${app}" &> /dev/null
 done
