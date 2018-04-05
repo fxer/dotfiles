@@ -1,0 +1,39 @@
+[
+  {
+    title: "ansible"
+    paths: [
+      "/Users/jmontgomery/repos/ansible-nginx"
+      "/Users/jmontgomery/repos/ansible-common"
+      "/Users/jmontgomery/repos/ansible-jmo"
+      "/Users/jmontgomery/repos/ansible-tor"
+      "/Users/jmontgomery/repos/ansible-php"
+      "/Users/jmontgomery/repos/ansible-dbserver"
+      "/Users/jmontgomery/repos/ansible-users"
+      "/Users/jmontgomery/repos/ansible-firewalld"
+    ]
+  }
+  {
+    title: "blog"
+    paths: [
+      "/Users/jmontgomery/repos/blog-jmo"
+      "/Users/jmontgomery/repos/post-mortems"
+    ]
+  }
+  {
+    title: "kol"
+    paths: [
+      "/Users/jmontgomery/Dropbox/mafia-fxer/scripts"
+    ]
+  {
+    title: "cujo"
+    paths: [
+      "/Users/jmontgomery/repos/cujo"
+    ]
+  }
+  {
+    title: "TIS-100"
+    paths: [
+      "/Users/jmontgomery/repos/tis-100"
+    ]
+  }
+]

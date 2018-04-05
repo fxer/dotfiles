@@ -12,16 +12,15 @@ ln -sfv "$DOTFILES_DIR/.bash_profile" ~
 ln -sfv "$DOTFILES_DIR/.vimrc" ~
 ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
+ln -sfv "$DOTFILES_DIR/atom" ~/.atom
 
 # prep vim
 mkdir -p ~/.vim/{swaps,backups,undo}
 ln -sfv "$DOTFILES_DIR/vim/colors" ~/.vim/colors
 
+
 # Install packages
 . "$DOTFILES_DIR/install/brew.sh"
 
-# Add homebrew bash 4 as valid shell
-grep -q -F "/usr/local/bin/bash" /etc/shells || echo "/usr/local/bin/bash" | sudo tee -a /etc/shells
-
-# Set user shell
-chsh -s /usr/local/bin/bash
+# Add homebrew bash 4 as valid shell, set as user's shell
+grep -q /usr/local/bin/bash /private/etc/shells || echo /usr/local/bin/bash | sudo tee -a /private/etc/shells | chsh -s /usr/local/bin/bash

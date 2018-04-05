@@ -4,9 +4,17 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
 # source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
 
-# unlimited-ish history file
-HISTFILESIZE=1000000000
-HISTSIZE=1000000000
+
+# History
+export HISTSIZE=32768;
+export HISTFILESIZE="${HISTSIZE}";
+export SAVEHIST=4096
+export HISTCONTROL=ignoredups:erasedups
+
+# Recursive globbing with "**"
+if [ ${BASH_VERSINFO[0]} -ge 4 ]; then
+  shopt -s globstar
+fi
 
 # homebrew bash4 bash-completion
 if [ -f /usr/local/share/bash-completion/bash_completion ]; then
