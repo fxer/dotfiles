@@ -7,7 +7,7 @@ set directory=~/.vim/swaps
 set undodir=~/.vim/undo
 
 " Show “invisible” characters
-set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set listchars=tab:>-,trail:·,extends:>,nbsp:_
 set list
 
 " Respect modeline in files
