@@ -19,3 +19,9 @@ ln -sfv "$DOTFILES_DIR/vim/colors" ~/.vim/colors
 
 # Install packages
 . "$DOTFILES_DIR/install/brew.sh"
+
+# Add homebrew bash 4 as valid shell
+grep -q -F "/usr/local/bin/bash" /etc/shells || echo "/usr/local/bin/bash" | sudo tee -a /etc/shells
+
+# Set user shell
+chsh -s /usr/local/bin/bash
