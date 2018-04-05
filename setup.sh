@@ -12,11 +12,11 @@ ln -sfv "$DOTFILES_DIR/.bash_profile" ~
 ln -sfv "$DOTFILES_DIR/.vimrc" ~
 ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
-ln -sfv "$DOTFILES_DIR/atom" ~/.atom
+ln -snfv "$DOTFILES_DIR/atom" ~/.atom
 
 # prep vim
 mkdir -p ~/.vim/{swaps,backups,undo}
-ln -sfv "$DOTFILES_DIR/vim/colors" ~/.vim/colors
+ln -snfv "$DOTFILES_DIR/vim/colors" ~/.vim/colors
 
 
 # Install packages
