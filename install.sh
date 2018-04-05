@@ -14,7 +14,8 @@ ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 
 # prep vim
-mkdir ~/.vim
+mkdir -p ~/.vim/{swaps,backups,undo}
+echo "$DOTFILES_DIR/vim/colors ~/.vim/colors"
 ln -sfv "$DOTFILES_DIR/vim/colors ~/.vim/colors"
 
 # Install packages

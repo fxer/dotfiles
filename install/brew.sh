@@ -12,6 +12,7 @@ apps=(
   nmap
   python
   ssh-copy-id
+  trash
   tree
   wget
   xz
