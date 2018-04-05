@@ -1,5 +1,5 @@
 " Set theme
-colorscheme Tomorrow-Night
+colorscheme Tomorrow-Night-Bright
 
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
