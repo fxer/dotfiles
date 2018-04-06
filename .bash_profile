@@ -64,4 +64,4 @@ alias rebase-dev="!(git pull || true) && git checkout dev && git pull && git che
 
 # enhance terminal prompt with git repo info
 GIT_PS1_SHOWDIRTYSTATE=true
-export PS1="\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ "
+export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
