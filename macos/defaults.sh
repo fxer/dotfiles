@@ -127,6 +127,6 @@ defaults write com.apple.Terminal ShowLineMarks -int 0
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "Activity Monitor" "Dock"; do
+for app in "Activity Monitor" "Dock" "Finder"; do
   killall "${app}" &> /dev/null
 done
