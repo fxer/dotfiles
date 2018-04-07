@@ -45,6 +45,10 @@ alias gyb="python3 gyb.py"
 alias py='python manage.py runserver'
 alias torstatus='cd ansible-jmo && ansible tor-relays -m shell -a "systemctl status tor" && cd -'
 
+# set docker-dinghy env vars
+#https://github.com/codekitchen/dinghy
+eval $(dinghy env)
+
 export WORKON_HOME=~/.virtualenvs/    # Python venv locaiton for virtualenvwrapper
 
 export CUJO_DATABASE_USER="django_tester"

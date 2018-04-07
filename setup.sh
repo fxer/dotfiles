@@ -12,7 +12,10 @@ ln -sfv "$DOTFILES_DIR/.bash_profile" ~
 ln -sfv "$DOTFILES_DIR/.vimrc" ~
 ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
-ln -snfv "$DOTFILES_DIR/atom" ~/.atom
+
+# prep atom
+mkdir -p ~/.atom
+ln -sfv "$DOTFILES_DIR/atom" ~/.atom
 
 # prep vim
 mkdir -p ~/.vim/{swaps,backups,undo}
