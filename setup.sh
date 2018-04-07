@@ -15,7 +15,7 @@ ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 
 # prep atom
 mkdir -p ~/.atom
-ln -sfv "$DOTFILES_DIR/atom" ~/.atom
+ln -sfv $DOTFILES_DIR/atom/* ~/.atom/
 
 # prep vim
 mkdir -p ~/.vim/{swaps,backups,undo}
