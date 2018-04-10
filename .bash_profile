@@ -51,10 +51,10 @@ eval $(dinghy env)
 
 # calc some hashes
 alias sha="sha256"
-alias sha1="1 $1"
-alias sha256="256 $1"
-alias sha512="512 $1"
-function get_sha() { echo -n "$2" | openssl sha -sha$1 }
+function sha1() { get_sha 1 $1; }
+function sha256() { get_sha 256 $1;}
+function sha512() { get_sha 512 $1;}
+function get_sha() { echo -n "$2" | openssl sha -sha$1; }
 
 export WORKON_HOME=~/.virtualenvs/    # Python venv locaiton for virtualenvwrapper
 
