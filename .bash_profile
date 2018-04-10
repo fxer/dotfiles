@@ -49,6 +49,13 @@ alias torstatus='cd ansible-jmo && ansible tor-relays -m shell -a "systemctl sta
 #https://github.com/codekitchen/dinghy
 eval $(dinghy env)
 
+# calc some hashes
+alias sha="sha256"
+alias sha1="1 $1"
+alias sha256="256 $1"
+alias sha512="512 $1"
+function get_sha() { echo -n "$2" | openssl sha -sha$1 }
+
 export WORKON_HOME=~/.virtualenvs/    # Python venv locaiton for virtualenvwrapper
 
 export CUJO_DATABASE_USER="django_tester"
