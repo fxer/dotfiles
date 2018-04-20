@@ -1,3 +1,6 @@
+# Keep things you don't want checked into the repo here
+source ~/.bash_secrets
+
 # Choose homebrew installed apps first
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
@@ -45,9 +48,7 @@ alias gyb="python3 gyb.py"
 alias py='python manage.py runserver'
 alias torstatus='cd ansible-jmo && ansible tor-relays -m shell -a "systemctl status tor" && cd -'
 
-# set docker-dinghy env vars
-#https://github.com/codekitchen/dinghy
-eval $(dinghy env)
+export GOPATH="${HOME}/.go"
 
 # calc some hashes
 alias sha="sha256"
@@ -64,6 +65,7 @@ export CUJO_DATABASE_PASSWORD="password"
 # macOS hacks
 alias fdns='echo "Flushing DNS..."; sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say flushed'
 alias fixcam='sudo killall VDCAssistant && sudo killall AppleCameraAssistant'
+alias updatedb="sudo /usr/libexec/locate.updatedb"
 
 # git
 alias gs='git status'

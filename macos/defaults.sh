@@ -13,6 +13,9 @@ sudo scutil --set HostName "$HOSTNAME"
 sudo scutil --set LocalHostName "$HOSTNAME"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$HOSTNAME"
 
+# Display date and day of week in menu bar clock
+defaults write com.apple.menuextra.clock DateFormat -string "EEE MMM d  h:mm a"
+
 
 ###############################################################################
 # Dock                                                                        #
@@ -127,6 +130,6 @@ defaults write com.apple.Terminal ShowLineMarks -int 0
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "Activity Monitor" "Dock" "Finder"; do
+for app in "Activity Monitor" "Dock" "Finder" "SystemUIServer"; do
   killall "${app}" &> /dev/null
 done

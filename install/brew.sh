@@ -9,9 +9,9 @@ apps=(
   htop
   imagemagick
   kubectl
-  macvim
   mtr
   nmap
+  postgresql
   python
   ssh-copy-id
   trash
@@ -27,6 +27,10 @@ brew cask install google-cloud-sdk    # GCP cli tools
 brew cask install postico             # visual postgresql tool
 brew cask install docker              # docker & docker-compose
 brew cask install virtualbox          # docker, and other, VM host
+brew cask install steam               # why not?
+brew cask install vlc                 # need to play them vids
+brew cask install sourcetree          # who don't like visual git diffs
+
 
 # Add homebrew bash 4 as valid shell, set as user's shell
 if ! grep -q /usr/local/bin/bash /etc/shells; then
