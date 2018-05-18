@@ -41,7 +41,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 
 # Shortcuts
-alias reload="source ~/.bash_profile"
+alias reload="source ~/.bash_profile && bind -f  ~/.inputrc"
 
 # Development
 alias gyb="python3 gyb.py"
@@ -74,6 +74,9 @@ alias gl='git pull'
 alias ga='git add -A && git status'
 function gc { git commit -m "$1"; }
 alias rebase-dev="!(git pull || true) && git checkout dev && git pull && git checkout - && git rebase dev"
+
+# GCP
+alias gssh='gcloud compute ssh --project='
 
 # enhance terminal prompt with git repo info
 GIT_PS1_SHOWDIRTYSTATE=true
