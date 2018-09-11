@@ -1,0 +1,2 @@
+-- Turn on query timing, who doesn't love metrics?
+\timing

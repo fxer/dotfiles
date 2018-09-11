@@ -10,6 +10,9 @@ export HISTFILESIZE="${HISTSIZE}";
 export SAVEHIST=4096
 export HISTCONTROL=ignoredups:erasedups
 
+# Wrapping is annoying, espeically in psql
+export PAGER="less --chop-long-lines --no-init --quit-if-one-screen"
+
 # Recursive globbing with "**"
 if [ ${BASH_VERSINFO[0]} -ge 4 ]; then
   shopt -s globstar
@@ -30,7 +33,7 @@ alias brewupg="brew upgrade && brew cask upgrade && brew cleanup && brew prune"
 
 export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxexexabagacad
-export CDPATH=.:~:~/repos:~/sites
+export CDPATH=.:~:~/repos:~/repos/go/src/gitlab.com/breadwallet
 
 # Directory listing/traversal
 alias l="ll"
@@ -42,13 +45,14 @@ alias ...="cd ../.."
 
 # Shortcuts
 alias reload="source ~/.bash_profile && bind -f  ~/.inputrc"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 # Development
 alias gyb="python3 gyb.py"
 alias py='python manage.py runserver'
 alias torstatus='cd ansible-jmo && ansible tor-relays -m shell -a "systemctl status tor" && cd -'
 
-export GOPATH="${HOME}/.go"
+export GOPATH="${HOME}/.go;${HOME}/repos/go"
 
 # calc some hashes
 alias sha="sha256"
@@ -77,7 +81,8 @@ alias rebase-dev="!(git pull || true) && git checkout dev && git pull && git che
 
 # GCP
 alias gssh='gcloud compute ssh --project='
+alias k='kubectl'
 
 # enhance terminal prompt with git repo info
 GIT_PS1_SHOWDIRTYSTATE=true
-export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
+export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\W\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
