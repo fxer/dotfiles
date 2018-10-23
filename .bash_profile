@@ -45,7 +45,8 @@ alias ...="cd ../.."
 
 # Shortcuts
 alias reload="source ~/.bash_profile && bind -f  ~/.inputrc"
-alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+# get external IP and print to stdout as well as copy to clipboard
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com | tee >(pbcopy)"
 
 # Development
 alias gyb="python3 gyb.py"
@@ -61,7 +62,10 @@ function sha256() { get_sha 256 $1;}
 function sha512() { get_sha 512 $1;}
 function get_sha() { echo -n "$2" | openssl sha -sha$1; }
 
+# python helpers
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 export WORKON_HOME=~/.virtualenvs/    # Python venv locaiton for virtualenvwrapper
+source /usr/local/bin/virtualenvwrapper.sh
 
 export CUJO_DATABASE_USER="django_tester"
 export CUJO_DATABASE_PASSWORD="password"

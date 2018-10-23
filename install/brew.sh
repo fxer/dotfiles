@@ -4,10 +4,8 @@ apps=(
   ansible
   bash
   bash-completion2
-  docker
   docker-compose
   docker-credential-helper
-  docker-machine
   git
   golang
   htop
@@ -36,9 +34,16 @@ brew cask install sourcetree          # who don't like visual git diffs
 brew cask install signal              # message safety first
 brew cask install slack               # chat chat chat
 brew cask install discord             # chat chat chat
+brew cask install docker              # Use Docker for Mac, which doesn't require a separate VM like virtualbox
+brew cask install minikube            # some light local kubernetes-ing
+brew cask install teamviewer          # gotta help family right
+brew cask install tor-browser         # convenient way to proxy-browse to test sites
 
 # Add homebrew bash 4 as valid shell, set as user's shell
 if ! grep -q /usr/local/bin/bash /etc/shells; then
    echo /usr/local/bin/bash | sudo tee -a /etc/shells;
    chsh -s /usr/local/bin/bash;
 fi;
+
+# Install python helpers
+pip3 install virtualenvwrapper
