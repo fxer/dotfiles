@@ -45,8 +45,8 @@ alias ...="cd ../.."
 
 # Shortcuts
 alias reload="source ~/.bash_profile && bind -f  ~/.inputrc"
-# get external IP and print to stdout as well as copy to clipboard
-alias myip="dig +short myip.opendns.com @resolver1.opendns.com | tee >(pbcopy)"
+# get external IP and print to stdout as well as copy IPv4 to clipboard
+alias myip="dig -6 +short myip.opendns.com @resolver1.opendns.com AAAA && dig -4 +short myip.opendns.com @resolver1.opendns.com A | tee >(pbcopy)"
 
 # Development
 alias gyb="python3 gyb.py"

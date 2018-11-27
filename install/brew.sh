@@ -10,6 +10,7 @@ apps=(
   golang
   htop
   imagemagick
+  jq
   kubectl
   mtr
   nmap
@@ -38,6 +39,7 @@ brew cask install docker              # Use Docker for Mac, which doesn't requir
 brew cask install minikube            # some light local kubernetes-ing
 brew cask install teamviewer          # gotta help family right
 brew cask install tor-browser         # convenient way to proxy-browse to test sites
+brew cask install yakyak              # best Google Hangouts chat client currently
 
 # Add homebrew bash 4 as valid shell, set as user's shell
 if ! grep -q /usr/local/bin/bash /etc/shells; then
