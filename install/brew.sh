@@ -40,6 +40,8 @@ brew cask install minikube            # some light local kubernetes-ing
 brew cask install teamviewer          # gotta help family right
 brew cask install tor-browser         # convenient way to proxy-browse to test sites
 brew cask install yakyak              # best Google Hangouts chat client currently
+brew cask install postman             # Developers (and pen-testers) best friend
+brew cask install gitter              # More devchat tools
 
 # Add homebrew bash 4 as valid shell, set as user's shell
 if ! grep -q /usr/local/bin/bash /etc/shells; then

@@ -29,7 +29,7 @@ source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 
 # homebrew
 alias brewup='brew update && echo "Outdated:" && brew outdated && brew cask outdated'
-alias brewupg="brew upgrade && brew cask upgrade && brew cleanup && brew prune"
+alias brewupg="brew upgrade && brew cask upgrade && brew cleanup"
 
 export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxexexabagacad
