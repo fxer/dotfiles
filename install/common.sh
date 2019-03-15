@@ -1,9 +1,7 @@
-# Install packages
+# Install common packages for bash & zsh
 
 apps=(
   ansible
-  bash
-  bash-completion2
   docker-compose
   docker-credential-helper
   git
@@ -12,6 +10,7 @@ apps=(
   imagemagick
   jq
   kubectl
+  kubectx
   mtr
   nmap
   postgresql
@@ -42,12 +41,5 @@ brew cask install tor-browser         # convenient way to proxy-browse to test s
 brew cask install yakyak              # best Google Hangouts chat client currently
 brew cask install postman             # Developers (and pen-testers) best friend
 brew cask install gitter              # More devchat tools
-
-# Add homebrew bash 4 as valid shell, set as user's shell
-if ! grep -q /usr/local/bin/bash /etc/shells; then
-   echo /usr/local/bin/bash | sudo tee -a /etc/shells;
-   chsh -s /usr/local/bin/bash;
-fi;
-
-# Install python helpers
-pip3 install virtualenvwrapper
+brew cask install 1password           # what do you hate security or something?
+brew cask install gimp                # for my bad 'shops

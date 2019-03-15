@@ -333,6 +333,7 @@ _complete_alias () {
 #
 # Uncomment and edit these lines to add your own alias completions.
 #
+# alias kubectl to k
 complete -F _complete_alias k
-#complete -F _complete_alias myalias2
-#complete -F _complete_alias myalias3
+# alias kubectx to kx
+complete -F _complete_alias kx
