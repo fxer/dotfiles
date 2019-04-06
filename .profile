@@ -19,10 +19,11 @@ export PAGER="less --chop-long-lines --no-init --quit-if-one-screen"
 alias ls='ls -G'
 alias l='ll'
 alias ll='ls -lAh'
-alias lt='ll -tr'   # list by timestamp, reversed
-alias lz='ll -Sr'   # list by size, reversed
+alias ltime='ll -tr'    # list by timestamp, reversed
+alias lz='ll -Sr'       # list by size, reversed
 alias ..='cd ..'
 alias ...='cd ../..'
+alias grep='ggrep'      # use modern GNU grep, not old-and-busted macOS BSD grep
 
 # homebrew
 alias brewup='brew update && echo "Outdated:" && brew outdated && brew cask outdated'
@@ -74,6 +75,7 @@ alias updatedb="sudo /usr/libexec/locate.updatedb"
 alias gssh='gcloud compute ssh --project='
 alias k='kubectl'
 alias kx='kubectx'
+alias kn='kubens'
 
 # run kubectl commands showing all namespaces, but excluding the system namespace
 alias ka='f(){ kubectl "$@" --all-namespaces | grep -v kube-system;  unset -f f; }; f'

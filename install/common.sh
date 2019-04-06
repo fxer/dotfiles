@@ -6,6 +6,7 @@ apps=(
   docker-credential-helper
   git
   golang
+  grep
   htop
   imagemagick
   jq
